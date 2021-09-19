@@ -6,25 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Media player</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
-<body>
 
+<body>
+    
     <h1>
         Media Player
     </h1>
-   <div class="holder">
-    <div class="music-info">
-        <h4 class="title">Ukulele</h4>
+   <div class="holder stop play">
+    <div class="music-info ">
+        Now Playing:
+        <h4 class="title">Kalimba</h4>
         <div class="progressholder">
             <div class="progress"></div>
         </div>
     </div>
-    <audio src="" id="audio"></audio>
+    <audio src="kalimba.mp3" id="audio"></audio>
+    <audio src="BOB acri.mp3"></audio>
     <div class="imgholder">
         <img src="" id="cover">
     </div>
+    <div class="img-container">
+        <img class="image"src="https://cdn.vox-cdn.com/thumbor/HjsiGlbFRWn0Lrr58c2eCf_LHE0=/0x0:2040x1360/920x613/filters:focal(857x517:1183x843):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/66560568/acastro_181016_1777_music_0001.0.jpg" alt="" srcset="">
+    </div>
+    <div class="navigation">
+        <button class="action-btn"id="prev">
+        <i class="fa fa-backward"></i>
+        </button>
+        <button id="play" class="action-btn">
+            <i class="fa fa-play"></i>
+        </button>
+        <button class="action-btn"id="next">
+            <i class="fa fa-forward"></i>
+        </button>
+    </div>
    </div>
-    
-   <script src="script.js"></script>
-</body>
+    <script src="musicplayer.js"></script>
+   
+</body> 
 </html>
