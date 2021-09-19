@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+*{
+        box-sizing: border-box;
+}
+body{
+
+height:100vh;
+margin:0;
+font-family:Lato;
+background-image: linear-gradient(0deg
+,rgb(247,247,247)23.8%
+rgb(252, 221, 221)92%);
+display:flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+}
+.holder{
+background-color:#fff;
+border-radius: 15px;
+box-shadow:0 20px 20px 0 rgba(252,169,168,0.6);
+padding:5px 0 30px 10px;
+margin:100px 0;
+z-index:10;
+width:75%;
+}
+.img-container{
+    position:relative;
+    width:270px;
+   
+}
+/* ;_; */
+
+.holder.stop .image{
+    animation-play-state:paused;
+}
+.image{
+    width:40%;
+    height:110px;
+    border-radius: 50%;
+    object-fit: cover;
+    bottom:auto;
+    position:inherit;
+    animation: rotates 3s linear infinite;
+} 
+@keyframes rotates{
+
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.navigation{
+    display:flex;
+    align-items: center;
+    z-index: 1;
+    justify-content: center;
+}
+.action-btn{
+    background-color: #fff;
+    border:0;
+    color:#dfdbdf;
+    font-size:20px;
+    cursor:pointer;
+    padding:10px;
+    margin:0 20px;
+
+}
+#play{
+color:#cdc2d0;
+font-size:30px;
+}
+.action-btn:focus{
+    outline:0;
+}
+.music-info{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius:15px 15px 0 0;
+    position:inherit,absolute;
+    top:0;
+    left:20px;
+    width:calc(100%-40px);
+    opacity:0;
+    transform:translateY(0%);
+    padding:10px 10px 10px 150px;
+    transition:transform 0.3s ease-in, opacity 0.3s;
+    border:2px solid rgb(230, 223, 223);
+    border-bottom: none;
+}
+
+.holder .music-info.play{
+opacity:1;
+transform:translateY(-100%);
+
+}
+.progressholder{
+background: rgb(240, 236, 236);
+border-radius:6px;
+margin:10px 0;
+height:4px;
+width:100%;
+
+}
+.progress{
+    background-color: #fe8daa;
+    border-radius:5px;
+    width:0%;
+    transition:width 0.1s linear;
+}
+.title{
+    margin:0;
+}
