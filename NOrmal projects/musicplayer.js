@@ -11,10 +11,10 @@ const cover= document.querySelector('#cover')
 
 //song titles
 
-const songs=['kalimba', 'BOB acri']
+const songs=['kalimba', 'BOB acri','ukulele','javelin-cred']
 
 let songIndex = 1
-
+let arrlen=songs.length-1
 loadSong(songs[songIndex])
 
 
@@ -22,13 +22,13 @@ function loadSong(song){
 
     title.innerText = song;
     audio.src=song+".mp3"
-
+    
 
 }
 function forward(){
 
     songIndex++
-    if(songIndex>1){
+    if(songIndex>arrlen){
          songIndex=0
         
     }
@@ -39,7 +39,7 @@ function back(){
 
     songIndex--
     if(songIndex<0){
-        songIndex=1;
+        songIndex=arrlen;
     }
    
     loadSong(songs[songIndex])
@@ -78,8 +78,15 @@ playBtn.classList.remove('fa-play')
 playBtn.classList.add('fa-pause')
 audio.load()
 audio.play()
-
+audio.addEventListener('timeupdate',progress1())
 }
+function progress1(e){
+    const{duration,currentTime} = e.srcElement
+    const progressP = (currentTime/duration)*100
+    progress.style.width='${progressP}%'
+}
+
+
 
 playBtn.addEventListener('click',()=>{
 
