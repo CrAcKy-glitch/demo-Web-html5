@@ -1,4 +1,4 @@
- const musicContainer= document.querySelector('.holder')
+const musicContainer= document.querySelector('.holder')
 const playBtn= document.querySelector('.fa-play')
 const prevBtn= document.querySelector('#prev')
 const nextBtn= document.querySelector('#next')
@@ -13,7 +13,7 @@ const cover= document.querySelector('#cover')
 
 const songs=['kalimba', 'BOB acri']
 
-let songIndex = 0
+let songIndex = 1
 
 loadSong(songs[songIndex])
 
@@ -21,7 +21,8 @@ loadSong(songs[songIndex])
 function loadSong(song){
 
     title.innerText = song;
-   
+    
+
 
 }
 function forward(){
@@ -29,7 +30,10 @@ function forward(){
     songIndex++
     if(songIndex>1){
          songIndex=0
+        
     }
+    loadSong(songs[songIndex])
+    audio.play()
 }
 function back(){
 
@@ -37,6 +41,9 @@ function back(){
     if(songIndex<0){
         songIndex=1;
     }
+   
+    loadSong(songs[songIndex])
+    audio.play()
 } 
 nextBtn.addEventListener('click',()=>{
 
@@ -50,16 +57,19 @@ prevBtn.addEventListener('click',()=>{
 
 function pauseSong(){
     musicContainer.classList.add('stop')
-    playBtn.querySelector.remove('fa-pause')
-    playBtn.querySelector.add('fa-play')
+    playBtn.classList.remove('fa-pause')
+    playBtn.classList.add('fa-play')
+    info.classList.remove('play')
     audio.pause()
 }
 function playSong(){
 
 musicContainer.classList.remove('stop')
 info.classList.add('play')
+musicContainer.classList.add('play')
 playBtn.classList.remove('fa-play')
 playBtn.classList.add('fa-pause')
+audio.load()
 audio.play()
 
 }
@@ -67,13 +77,13 @@ audio.play()
 playBtn.addEventListener('click',()=>{
 
     const isPLaying = musicContainer.classList.contains('play')
-
+    
     if(isPLaying){
-        playSong()
+       pauseSong()
     }
     else{
        
-        pauseSong()
+        playSong()
     }
 })
 
