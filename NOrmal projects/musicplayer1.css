@@ -15,6 +15,9 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 }
+.text{
+    font-size:0.8vw;
+}
 .holder{
 background-color:#fff;
 border-radius: 15px;
