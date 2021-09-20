@@ -21,7 +21,7 @@ loadSong(songs[songIndex])
 function loadSong(song){
 
     title.innerText = song;
-    audio.src="music\"+song+".mp3"
+    audio.src=song+".mp3"
 
 
 }
@@ -47,11 +47,17 @@ function back(){
 } 
 nextBtn.addEventListener('click',()=>{
 
+    const boolPlaying=musicContainer.classList.contains('play')
+    if(boolPlaying){
     forward()
-    
+    }
 })
 prevBtn.addEventListener('click',()=>{
-    back()
+    const boolPlaying=musicContainer.classList.contains('play')
+    if(boolPlaying){
+        back()
+    }
+    
 })
 
 
