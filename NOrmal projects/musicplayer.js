@@ -15,33 +15,31 @@ const songs=['kalimba', 'BOB acri']
 
 let songIndex = 1
 
-// calling function loadSong(according to the index set)
-
 loadSong(songs[songIndex])
 
 
 function loadSong(song){
 
     title.innerText = song;
-    
+    audio.src=song+".mp3"
 
 
 }
 function forward(){
-//countering index to go forward 
+
     songIndex++
     if(songIndex>1){
          songIndex=0
         
     }
-    loadSong(songs[songIndex])//calling function to change text
+    loadSong(songs[songIndex])
     audio.play()
 }
 function back(){
-//negating songIndex to go backwards
+
     songIndex--
-    if(songIndex<0){//if index goes out of bounds
-        songIndex=1;//resetting the value back to 1 
+    if(songIndex<0){
+        songIndex=1;
     }
    
     loadSong(songs[songIndex])
@@ -57,14 +55,15 @@ prevBtn.addEventListener('click',()=>{
 })
 
 
-function pauseSong(){//function to pause the song
+function pauseSong(){
     musicContainer.classList.add('stop')
+    musicContainer.classList.remove('play')
     playBtn.classList.remove('fa-pause')
     playBtn.classList.add('fa-play')
     info.classList.remove('play')
     audio.pause()
 }
-function playSong(){//function to play the song
+function playSong(){
 
 musicContainer.classList.remove('stop')
 info.classList.add('play')
@@ -80,13 +79,12 @@ playBtn.addEventListener('click',()=>{
 
     const isPLaying = musicContainer.classList.contains('play')
     
-    if(isPLaying){//if true will show the button to pause the music
+    if(isPLaying){
        pauseSong()
     }
-    else{// else will show the option to play it
+    else{
        
         playSong()
     }
 })
-//End of script
 
