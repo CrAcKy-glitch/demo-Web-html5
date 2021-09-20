@@ -21,7 +21,7 @@ loadSong(songs[songIndex])
 function loadSong(song){
 
     title.innerText = song;
-    audio.src=song+".mp3"
+    audio.src="music\"+song+".mp3"
 
 
 }
