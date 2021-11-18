@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+    <title>INTERFACE | OUR TEAM</title>
+
+</head>
+<style>
+     @media only screen and (max-width: 520px) {
+        #myvideo{
+            /* right:480%;
+             */
+            height:100% ;
+            text-align:center;
+            /* width:50%; */
+             overflow:hidden;
+             /* display:none; */
+        }
+        *{
+            overflow-x: hidden;
+        }
+        #logo-video{
+            padding-bottom:-40px;
+        }
+        .text1{
+            font-size:larger;
+        }
+        .mobile-vertical{
+            
+            background-color:white;
+            font-family: Montserrat;
+
+        }
+        .mi{
+            display:block !important;
+            position:sticky;
+            top:100px;
+
+        }
+        .middle{
+            margin-top:80% !important;
+        }
+        .text{
+            padding-bottom:-10px;
+        }
+    
+    }
+    @media only screen and (max-width:1020px){
+        #holder1{
+
+display: none!important;
+
+}
+.side-nav-0{
+display: block !important;
+
+}
+.tab{
+    overflow-x:scroll;
+}
+    }
+    *::selection{
+        background-color: rgb(228,167,88);
+        color:white;
+    }
+    
+    body{
+        overflow-x:hidden;
+    }
+    .svg{
+        width:20%;
+    }
+    #myvideo{
+    position:fixed;
+    top:14vh;
+    right: 0;
+    left:7vh;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+    align-self: center;
+    margin-right:20px;
+    }
+    .logo{
+        /* width:16vh; */
+        height:30vh;
+    }
+    .text{
+        text-align: center;
+        /* margin-left:50%; */
+    }
+    header{
+        background-color: white;
+        position:sticky;
+        top:0;
+        z-index:1;
+        padding:-10px;
+        font-family:Montserrat;
+    }
+    .logoup{
+        text-align:center ;
+        box-shadow: 0 0 10px 0 rgb(180, 177, 177);
+    }
+    .navlink{
+        font-family:Montserrat;
+        padding-right:4vh;
+        color:black;
+        text-decoration: none;
+        font-weight: bolder;
+        border-bottom:none;
+        transition:all 0.2s linear;
+        word-spacing: 10px;
+        font-size:1vw;
+    }
+    
+    .navlink:hover{
+
+        /* border-bottom:black; */
+        color:rgb(228, 167, 88);
+    
+    }
+    .middle{
+        /* background-color:white; */
+        margin-top:10vh;
+        text-align:center;
+        /* opacity:0.8; */
+    }
+    .middle1{
+        text-align:center;
+    }
+    .line{
+        width:40%;
+        height:5px;
+        background-color:rgb(228, 167, 88);
+        border-radius:10px;
+
+    }
+    .text1{
+        padding:20px 30px 100px 50px;
+        font-family: Montserrat;
+        font-size:2vw;
+        /* max-width:50%; */
+        /* text-align: center; */
+    }
+    .center{
+        text-align: center;
+        max-width:50%;
+        margin-left:24.5%;
+    }
+    .holder{
+        background-color: white;
+        margin-top:30%;
+    }
+    .navholder{
+        /* display:inline; */
+        /* text-align: left; */
+        display: inline-block;
+        justify-content: space-between;
+        /* align-items: center; */
+        max-width:50%;
+        margin-left:-20%;
+        
+    }
+    .nav{
+        
+        /* margin-top:-200px; */
+        display: flex;
+    justify-content: space-around;
+
+    /* background-color: rgba(0, 0, 0, 0); */
+    /* align-items: center; */
+    /* min-height: 14vh; */
+    /* width: 100%; */
+    z-index: 2;
+    
+    }
+    .lo{
+    display:inline;
+}
+   
+    #up{
+        margin-right:60vh;
+        /* margin-left:-60vh; */
+        align-self: left;
+    }
+    footer{
+        background-color:lightgrey;
+        opacity:0.8;
+    }
+    .logo-christ{
+        opacity:1;
+    }
+    #logo{
+        width:40vh;
+        clip-path: inset(65% 0 15% 0);
+        /* margin-top:-400px; */
+    }
+    .btm,.bottom{
+        bottom:0;
+        position:sticky;
+        text-align:right;
+        z-index: 0;
+        
+    }
+  
+    .btm1{
+        right:2px;
+        border-radius: 50px;
+        width:5%;
+        /* display:flex;
+        flex:column; */
+    }
+    .middle{
+        text-align:center;
+
+    }
+    .logo-video{
+      max-width:10%;
+    }
+    .mobile-vertical{
+        /* display:none; */
+        background-color:white;
+        /* z-index:2; */
+
+    }
+    .mi{
+        /* opacity:0; */
+        display:none;
+        text-align:center;
+    }
+    .copyright{
+        font-family:Montserrat;text-align:center;font-weight:bolder;
+    }
+    .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  font-family: Montserrat;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-family: Montserrat;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.side-nav-0{
+    display: none;
+}
+.buttonholder{
+    text-align:center;
+
+}
+.video-intro{
+    text-align: center;
+}
+.video-int{
+    border:none;
+}
+.social{
+    text-align: left;
+    padding:10px;
+}
+.social-links{
+    width:2%;
+}
+.interface{
+    text-align: center;
+}
+
+th,td{
+    border:2px solid black;
+    padding:10px;
+}
+table{
+    margin-left:13%;
+   
+}
+.tab{
+    text-align: center;
+    padding:10px;
+    /* overflow-x:scroll;   */
+}
+table{
+    margin-left:28%;
+    background-color: white;
+    font-family:Montserrat ;
+    font-weight:bolder;
+}
+</style>
+<body>
+    <header class="logoup">
+        <!-- <div class="temp"style="text-align:center;">
+            <img src="https://www.lawctopus.com/wp-content/uploads/2014/07/cu-logo.jpg" alt="" srcset="">
+        </div> -->
+        <div id="holder1">
+          
+            <img src="logo.png" alt="" srcset=""class="logo"id="up">
+    
+    <div class="navholder">
+    <nav class="nav">
+        <a href="index.html" class="navlink">HOME</a><a href="Cryptomania-schedule.html" class="navlink">SCHEDULE</a><a href="Cryptomania-Our Team.html" class="navlink">TEAM</a><a href="Cryptomania-events.html" class="navlink">EVENTS</a><a href="Cryptomania-about.html" class="navlink">ABOUT</a><a class="navlink" href="Cryptomania-contact.html">CONTACT US</a>
+        <a href="Cryptomania-events.html" class="navlink">REGISTER</a>
+        
+        
+    </nav>
+    
+    <br>
+    </div>
+     <div class="lo">
+        <img src="Christ Logo Color.png" alt=""width="25%">
+    </div> 
+    
+    
+    
+    </div>
+    
+        <div class="side-nav-0">
+           
+         <div id="mySidenav" class="sidenav">
+            
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">HOME</a>
+            <a href="Cryptomania-schedule.html">SCHEDULE</a>
+            <a href="Cryptomania-Our Team.html">TEAM</a>
+            <a href="Cryptomania-events.html">EVENTS</a>
+            <a href="Cryptomania-about.html">ABOUT</a>
+            <a href="Cryptomania-contact.html">CONTACT US</a>
+            <a href="Cryptomania-events.html">REGISTER</a>
+            <br><br>
+            <img src="Christ Logo Color.png" width="80%"alt="">
+         </div>
+          
+          <!-- <h2>Animated Sidenav Example</h2> -->
+          <!-- <p>Click on the element below to open the side navigation menu.</p> -->
+          <img src="logo.png" alt="" srcset=""class="logo"id="up">
+          <span style="font-size:30px;cursor:pointer;padding:0;" onclick="openNav()">&#9776; </span>
+          <br>
+        </div>
+    
+    </header>
+    <div class="middle">
+        <video id="myvideo"src="crypto0.mp4"autoplay loop muted >
+         <!-- <source src="crpto0.mp4" type=""> -->
+        </video>
+    </div>
+       
+    <div class="tab">
+        <table>
+            <tr>
+                <th>
+                    SL.NO
+                </th>
+                <th style="padding:80px;">
+                    ROLE
+                    
+                </th>
+               
+                
+                <th>
+                    NAMES
+                </th>
+                <th>
+                    Email Id's
+                </th>
+                 
+            </tr>
+            <tr>
+               
+                           <td>1</td>
+                           <th>CORE TEAM</th>
+                           <td>Vanshika Khare</td>
+                           <td>
+                            vanshika.khare@science.christuniversity.in</td>
+
+
+                            
+                           
+            </tr>
+            <tr>
+                
+                <td>2</td>
+                <th>CORE TEAM</th>
+                <td>Shakti Aswin </td>
+                <td>
+                    shakthi.aswin@science.christuniversity.in
+                    </td>
+                    </tr>
+
+                <tr>
+                    
+                    <td>3</td>
+                    <th>CORE TEAM</th>
+                    <td>Siddhant Rao </td>
+                    <td>siddhant.rao@science.christuniversity.in</td>
+
+                </tr>
+                <tr>
+                    
+                    <td>4</td>
+                    <th>CORE TEAM</th>
+                    <td>Vanshika Rajgaria</td>
+                    <td>vanshika.rajgaria@science.christuniversity.in</td>
+
+                </tr>
+                <tr>
+                    
+                    <td>5</td>
+                    <th>CORE TEAM</th>
+                    <td>K N Gurutej </td>
+                    <td>kn.gurutej@science.christuniversity.in</td>
+                </tr>
+                <tr>
+                  
+                    <td>6</td>
+                    <th>CORE TEAM</th>
+                    <td>Vageesha</td>
+                    <td>vageesha@science.christuniversity.in </td>
+
+                </tr>
+                <tr>
+                  
+                    <td>7</td>
+                    <th>CORE TEAM</th>
+                    <td>Reena</td>
+                    <td>Reena@science.christuniversity.in</td>
+
+                </tr>
+                <tr>
+                    
+                    <td>8</td>
+                    <th>CORE TEAM</th>
+                    <td>Lakshmi Narayana</td>
+                    <td>lakshmi.b@science.christuniversity.in</td>
+                </tr>
+                <tr>
+                   
+                    <td>9</td>
+                    <th>WEBSITE DEVELOPMENT </th>
+                    <td>Ansh Arora</td>
+                    <td>ansh.arora@bca.christuniversity.in</td>
+                </tr>
+                <tr>
+                    
+                      
+                    <td>10</td>
+                    <th>DESIGN TEAM</th>
+                    <td>Nikhil Nema</td>
+                    <td>nikhil.nema@science.christuniversity.in</td>
+                    
+                </tr>
+                <tr>
+                    
+                    
+                <td>11</td>
+                <th>DESIGN TEAM</th>
+                <td>Tarana Bopanna M</td>
+                <td>tarana.m@science.christuniversity.in</td>
+                
+                </tr>
+                <tr>
+                    
+                  
+                <td>12</td>
+                <th>DESIGN TEAM</th>
+                <td>Bhargav Phukan</td>
+                <td>bhargav.phukan@science.christuniversity.in</td>
+                
+                </tr>
+                <tr>
+                    
+                    
+                <td>13</td>
+                <th>DESIGN TEAM</th>
+                <td> Aarthi Murugan</td>
+                <td>aarthi.murugan@science.christuniversity.in</td>
+                
+                </tr>
+                <tr>
+                    
+                    <td>14</td>
+                    <th>DESIGN TEAM</th>
+                    <td> Rishabh Nahar</td>
+                    <td>rishabh.nahar@bca.christuniversity.in</td>
+                    
+                </tr>
+                <tr>
+                    
+                    <td>15</td>
+                    <th>DESIGN TEAM</th>
+                    <td>Sheetal Sojo</td>
+                    <td>sheetal.sijo@science.christuniversity.in</td>
+                    
+                </tr>
+                <tr>
+                    
+                    <td>16</td>
+                    <th>VIDEO EDITORS</th>
+                    <td>Vivek Krishna</td>
+                    <td>vivek.krishna@science.christuniversity.in</td>
+                    
+                </tr>
+                <tr>
+                   
+                    <td>16</td>
+                    <th>VIDEO EDITORS</th>
+                    <td>CHAPLE ALWIN ANIL</td>
+                    <td>chaple.anil@science.christuniversity.in</td>
+
+                </tr>
+                <tr>
+                    
+                    <td>17</td>
+                    <th>INFOBYTE</th>
+                    <td> Ishita Shankar</td>
+                    <td>ishita.shankar@science.christuniversity.in</td>
+
+                </tr>
+                <tr>
+                    
+                    <td>18</td>
+                    <th>INFOBYTE</th>
+                    <td> Vanshika Khare</td>
+                    <td>vanshika.khare@science.christuniversity.in</td>
+
+                </tr>
+                <tr>
+                  
+                    <td>19</td>
+                    <th>Sponsorship</th>
+                    <td> Lakshmi S Lalu</td>
+                    <td>lakshmi.lalu@science.christuniversity.in</td>
+                </tr>
+                <tr>
+                    
+                    <td>20</td>
+                    <th>Sponsorship</th>
+                    <td> Lakshmi Narayana</td>
+                    <td>lakshmi.b@science.christuniversity.in</td>
+                </tr>
+
+            </tr>
+        </table>
+    </div>
+   
+
+
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+        </script>
+     <footer>
+        <br><br>
+        
+           
+        <!-- <div class="logo-christ">
+            <a href="https://christuniversity.in/"target="_blank">
+                <img src="CHRIST LOGO  Black.png" alt="" srcset=""style="width:40vh;">
+            </a>
+            
+        </div> -->
+        <br>
+        <div class="interface">
+            <img src="interface.png" alt=""width="20%" style="opacity:1;">
+        </div>
+        <div class="copyright">
+            All rights reserved Christ University, Department of Computer science, Interface and team &copy;
+        </div>
+        
+        <br>
+        <div class="social">
+            <a href="https://www.instagram.com/tv/CWDVotiowFL/?utm_source=ig_web_copy_link"class="social-links">
+                <img src="ig.png" class="social-links"alt="">
+               </a>
+               <a href="https://www.facebook.com/www.christuniversity.in/" class="social-links">
+               <img src="fb.png" class="social-links"alt="">
+            </a>
+            <a href="">
+                <img src="yt.jpg" alt="" class="social-links">
+            </a>
+    
+        </div>
+        <!-- <div class="bottom">
+            <a href="#get" class="btm"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWOZGhYiUrSpP_VU sx7sVfy_wFdrIpkpqG0w&usqp=CAU" alt="" srcset=""class="btm1">
+            </a>  
+         </div> -->
+         
+        
+    </footer>
+</body>
+</html>

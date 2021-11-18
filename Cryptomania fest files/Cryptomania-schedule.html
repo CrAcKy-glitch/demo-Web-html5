@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>INTERFACE | SCHEDULE</title>
+</head>
+<style>
+        @media only screen and (max-width:1020px){
+        #holder1{
+
+display: none!important;
+
+}
+.side-nav-0{
+display: block !important;
+
+}
+.tab1{
+    overflow-x:scroll;
+}
+body{
+    overflow-x:none;
+}
+        }
+ *::selection{
+        background-color: rgb(228,167,88);
+        color:white;
+    }
+    
+    body{
+        overflow-x:hidden;
+    }
+    .svg{
+        width:20%;
+    }
+    #myvideo{
+    position:fixed;
+    top:14vh;
+    right: 0;
+    left:7vh;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+    align-self: center;
+    margin-right:20px;
+    }
+    .logo{
+        /* width:16vh; */
+        height:30vh;
+    }
+    .text{
+        text-align: center;
+        /* margin-left:50%; */
+    }
+    header{
+        background-color: white;
+        position:sticky;
+        top:0;
+        z-index:1;
+        padding:-10px;
+        box-shadow: 0 0 10px 0 rgb(180, 177, 177);
+    }
+    .logoup{
+        text-align:center ;
+    }
+    .navlink{
+        font-family:Montserrat;
+        padding-right:4vh;
+        color:black;
+        text-decoration: none;
+        font-weight: bolder;
+        border-bottom:none;
+        transition:all 0.2s linear;
+        word-spacing: 10px;
+        font-size:1vw;
+    }
+    
+    .navlink:hover{
+
+        /* border-bottom:black; */
+        color:rgb(228, 167, 88);
+    
+    }
+    .middle{
+        /* background-color:white; */
+        margin-top:10vh;
+        text-align:center;
+        /* opacity:0.8; */
+    }
+    .middle1{
+        text-align:center;
+    }
+    .line{
+        width:40%;
+        height:5px;
+        background-color:rgb(228, 167, 88);
+        border-radius:10px;
+
+    }
+    .text1{
+        padding:20px 30px 100px 50px;
+        font-family: Montserrat;
+        font-size:2vw;
+        /* max-width:50%; */
+        /* text-align: center; */
+    }
+    .center{
+        text-align: center;
+        max-width:50%;
+        margin-left:24.4%;
+    }
+    .holder{
+        background-color: white;
+        margin-top:30%;
+    }
+    .navholder{
+        /* display:inline; */
+        /* text-align: left; */
+        display: inline-block;
+        justify-content: space-between;
+        /* align-items: center; */
+        max-width:50%;
+        margin-left:-20%;
+        
+    }
+    .nav{
+        
+        /* margin-top:-200px; */
+        display: flex;
+    justify-content: space-around;
+
+    /* background-color: rgba(0, 0, 0, 0); */
+    /* align-items: center; */
+    /* min-height: 14vh; */
+    /* width: 100%; */
+    z-index: 2;
+    
+    }
+    .lo{
+    display:inline;
+}
+    #buttonholder{
+      text-align: center;
+        word-spacing: 300px;
+    }
+    .btn{
+        background-color:rgb(228, 167, 88);
+        padding:20px;
+        font-family:Montserrat;
+        color:white;
+        transition: background-color 0.4s ease;
+        font-size:1vw;
+        border:none;
+        cursor: pointer;
+        border:2px solid white;
+        
+        /* width:25%; */
+        
+    }
+    .btn:hover{
+        background-color: white;
+color:black;
+border:2px solid black;
+
+    }
+    #up{
+        margin-right:60vh;
+        /* margin-left:-60vh; */
+        align-self: left;
+    }
+    footer{
+        background-color:lightgrey;
+        opacity:0.8;
+    }
+    .logo-christ{
+        opacity:1;
+    }
+    #logo{
+        width:40vh;
+        clip-path: inset(65% 0 15% 0);
+        /* margin-top:-400px; */
+    }
+    .btm,.bottom{
+        bottom:0;
+        position:sticky;
+        text-align:right;
+        z-index: 0;
+        
+    }
+  
+    .btm1{
+        right:2px;
+        border-radius: 50px;
+        width:5%;
+        /* display:flex;
+        flex:column; */
+    }
+    .middle{
+        text-align:center;
+
+    }
+    .logo-video{
+      max-width:10%;
+    }
+    .mobile-vertical{
+        display:none;
+        /* background-color:white; */
+        /* z-index:2; */
+
+    }
+    .mi{
+        /* opacity:0; */
+        display:none;
+        text-align:center;
+    }
+    .copyright{
+        font-family:Montserrat;text-align:center;font-weight:bolder;
+    }
+    table, th, td {
+  border:2px solid black;
+  padding:10px;
+}
+.tab1{
+text-align: center;
+}
+table{
+    text-align: center;
+    margin-left:22%;
+    width:50%;
+}
+.social{
+    text-align: left;
+    padding:10px;
+}
+.social-links{
+    width:2%;
+}
+.interface{
+    text-align: center;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  font-family: Montserrat;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.side-nav-0{
+    display: none;
+}
+
+</style>
+<body>
+    <header class="logoup">
+        <!-- <div class="temp"style="text-align:center;">
+            <img src="https://www.lawctopus.com/wp-content/uploads/2014/07/cu-logo.jpg" alt="" srcset="">
+        </div> -->
+        <div id="holder1">
+          
+            <img src="logo.png" alt="" srcset=""class="logo"id="up">
+    
+    <div class="navholder">
+    <nav class="nav">
+        <a href="index.html" class="navlink">HOME</a><a href="Cryptomania-schedule.html" class="navlink">SCHEDULE</a><a href="Cryptomania-Our Team.html" class="navlink">TEAM</a><a href="Cryptomania-events.html" class="navlink">EVENTS</a><a href="Cryptomania-about.html" class="navlink">ABOUT</a><a class="navlink" href="Cryptomania-contact.html">CONTACT US</a>
+        <a href="Cryptomania-events.html" class="navlink">REGISTER</a>
+        
+        
+    </nav>
+    
+    <br>
+    </div>
+     <div class="lo">
+        <img src="Christ Logo Color.png" alt=""width="25%">
+    </div> 
+    
+    
+    
+    </div>
+    
+        <div class="side-nav-0">
+           
+         <div id="mySidenav" class="sidenav">
+            
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">HOME</a>
+            <a href="Cryptomania-schedule.html">SCHEDULE</a>
+            <a href="Cryptomania-Our Team.html">TEAM</a>
+            <a href="Cryptomania-events.html">EVENTS</a>
+            <a href="Cryptomania-about.html">ABOUT</a>
+            <a href="Cryptomania-contact.html">CONTACT US</a>
+            <a href="Cryptomania-events.html">REGISTER</a>
+            <br><br>
+            <img src="Christ Logo Color.png" width="80%"alt="">
+         </div>
+          
+          <!-- <h2>Animated Sidenav Example</h2> -->
+          <!-- <p>Click on the element below to open the side navigation menu.</p> -->
+          <img src="logo.png" alt="" srcset=""class="logo"id="up">
+          <span style="font-size:30px;cursor:pointer;padding:0;" onclick="openNav()">&#9776; </span>
+          <br>
+        </div>
+    
+    </header>
+    <br><br><br>
+    <div class="tab1">
+    <div class="tab">
+    <table>
+        <tr>
+          <th>Date and Event</th>
+          <th>2-3 PM</th>
+          <th>3-3:30 PM</th>
+          <th>3:30-4:00 PM </th>
+          <th>4-4:15 PM</th>
+          <th>4:15-5:15 PM</th>
+          <th>5:15-6:15 PM</th>
+          
+        </tr>
+        <tr>
+          <td>DAY 1 ,17th Nov</td>
+          <td>Graphic Designer</td>
+          <td>Photography breifing</td>
+          <td>Code debugging(breifing session)</td>
+          <td>Code debugging(starting session)</td>
+          <!-- <td></td> -->
+          <td></td>
+          <td>Most Innovative app(prelims/breifing session)</td>
+         
+        </tr>
+        <tr>
+          <td>Day 2,18th Nov</td>
+          <td>JAM IT!</td>
+          <td>Code Debugging Final</td>
+          <td>Graphic Designer(results)</td>
+          <td>Treasure hunts (Prelims/round 1)</td>
+          <td>Ghost in the heap</td>
+          <td>Valorant Tournament 1</td>
+          
+        </tr>
+        <tr>
+            <td>Day 3, 19th Nov</td>
+            <td>Google it</td>
+            <td>Most Innovative app(finals)</td>
+            <td>Most Innovative app(finals)</td>
+            <td>Treasure Hunt Round 2</td>
+            <td>Ghost in the heap</td>
+            <td>ValorantTournament 2</td>
+          </tr>
+          <tr>
+            <td>Day 4, 20th Nov</td>
+            <td>10-11 AM <br> Treasure hunt(Final Round)</td>
+            <td>11-11:30 AM <br> Ghost in the heap</td>
+            <td> 11:30-12 PM <br> Valorant Final Tournament</td>
+            <td>1-2 PM <br>Break</td>
+            <td>2-3PM <br> Valedictory Ceremony</td>
+            <td>3-4 PM <br> Valdictory Ceremony Culturals</td>
+            
+          </tr>
+       
+      </table>
+    </div>
+</div>
+<br><br>
+<footer>
+    <br><br>
+    
+       
+    <!-- <div class="logo-christ">
+        <a href="https://christuniversity.in/"target="_blank">
+            <img src="CHRIST LOGO  Black.png" alt="" srcset=""style="width:40vh;">
+        </a>
+        
+    </div> -->
+    <br>
+    <div class="interface">
+        <img src="interface.png" alt=""width="20%" style="opacity:1;">
+    </div>
+    <div class="copyright">
+        All rights reserved Christ University, Department of Computer science, Interface and team &copy;
+    </div>
+    
+    <br>
+    <div class="social">
+        <a href="https://www.instagram.com/tv/CWDVotiowFL/?utm_source=ig_web_copy_link"class="social-links">
+            <img src="ig.png" class="social-links"alt="">
+           </a>
+           <a href="https://www.facebook.com/www.christuniversity.in/" class="social-links">
+           <img src="fb.png" class="social-links"alt="">
+        </a>
+        <a href="">
+            <img src="yt.jpg" alt="" class="social-links">
+        </a>
+
+    </div>
+    <!-- <div class="bottom">
+        <a href="#get" class="btm"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWOZGhYiUrSpP_VU sx7sVfy_wFdrIpkpqG0w&usqp=CAU" alt="" srcset=""class="btm1">
+        </a>  
+     </div> -->
+     
+    
+</footer>
+<script>
+    function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+</script>
+</body>
+</html>

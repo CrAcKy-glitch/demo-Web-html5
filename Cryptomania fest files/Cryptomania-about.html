@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        INTERFACE | ABOUT
+    </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+   
+</head>
+<style>
+     @media only screen and (max-width:1020px){
+        #holder1{
+
+display: none!important;
+
+}
+.side-nav-0{
+display: block !important;
+
+}
+body{
+    overflow-x:hidden;
+}
+     }
+    
+    *::selection{
+        background-color: rgb(228,167,88);
+        color:white;
+    }
+    
+    body{
+        overflow-x:hidden;
+    }
+    .svg{
+        width:20%;
+    }
+    #myvideo{
+    position:fixed;
+    top:14vh;
+    right: 0;
+    left:7vh;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+    align-self: center;
+    margin-right:20px;
+    }
+    .logo{
+        /* width:16vh; */
+        height:30vh;
+    }
+    .text{
+        text-align: center;
+        /* margin-left:50%; */
+    }
+    header{
+        background-color: white;
+        position:sticky;
+        top:0;
+        z-index:1;
+        padding:-10px;
+        font-family: Montserrat;
+    }
+    .logoup{
+        text-align:center ;
+        box-shadow: 0 0 10px 0 rgb(180, 177, 177);
+    }
+    .navlink{
+        font-family:Montserrat;
+        padding-right:4vh;
+        color:black;
+        text-decoration: none;
+        font-weight: bolder;
+        border-bottom:none;
+        transition:all 0.2s linear;
+        word-spacing: 10px;
+        font-size:1vw;
+    }
+    
+    .navlink:hover{
+
+        /* border-bottom:black; */
+        color:rgb(228, 167, 88);
+    
+    }
+    .middle{
+        /* background-color:white; */
+        margin-top:10vh;
+        text-align:center;
+        /* opacity:0.8; */
+    }
+    .middle1{
+        text-align:center;
+    }
+    .line{
+        width:40%;
+        height:5px;
+        background-color:rgb(228, 167, 88);
+        border-radius:10px;
+
+    }
+    .text1{
+        padding:20px 30px 100px 50px;
+        font-family: Montserrat;
+        font-size:2vw;
+        /* max-width:50%; */
+        /* text-align: center; */
+    }
+    .center{
+        text-align: center;
+        max-width:50%;
+        margin-left:24.5%;
+    }
+    .holder{
+        background-color: white;
+        margin-top:30%;
+    }
+    .navholder{
+        /* display:inline; */
+        /* text-align: left; */
+        display: inline-block;
+        justify-content: space-between;
+        /* align-items: center; */
+        max-width:50%;
+        margin-left:-20%;
+        
+    }
+    .nav{
+        
+        /* margin-top:-200px; */
+        display: flex;
+    justify-content: space-around;
+
+    /* background-color: rgba(0, 0, 0, 0); */
+    /* align-items: center; */
+    /* min-height: 14vh; */
+    /* width: 100%; */
+    z-index: 2;
+    
+    }
+    .lo{
+    display:inline;
+}
+    #buttonholder{
+      text-align: center;
+        
+    }
+    /* btn */
+    .btn{
+        background-color:rgb(228, 167, 88);
+        padding:35px;
+        font-family:Montserrat;
+        color:white;
+        transition: background-color 0.4s ease;
+        font-size:2vw;
+        border:none;
+        cursor: pointer;
+        border:2px solid white;
+        /* width:25%; */
+        
+    }
+    .btn:hover{
+        background-color: white;
+color:black;
+border:2px solid black;
+
+    }
+    #up{
+        margin-right:60vh;
+        /* margin-left:-60vh; */
+        align-self: left;
+    }
+    footer{
+        background-color:lightgrey;
+        opacity:0.8;
+    }
+    .logo-christ{
+        opacity:1;
+    }
+    #logo{
+        width:40vh;
+        clip-path: inset(65% 0 15% 0);
+        /* margin-top:-400px; */
+    }
+    .btm,.bottom{
+        bottom:0;
+        position:sticky;
+        text-align:right;
+        z-index: 0;
+        
+    }
+  
+    .btm1{
+        right:2px;
+        border-radius: 50px;
+        width:5%;
+        /* display:flex;
+        flex:column; */
+    }
+    .middle{
+        text-align:center;
+
+    }
+    .logo-video{
+      max-width:10%;
+    }
+    .mobile-vertical{
+        /* display:none; */
+        background-color:white;
+        /* z-index:2; */
+
+    }
+    .mi{
+        /* opacity:0; */
+        display:none;
+        text-align:center;
+    }
+    .copyright{
+        font-family:Montserrat;text-align:center;font-weight:bolder;
+    }
+    .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  font-family: Montserrat;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.side-nav-0{
+    display: none;
+}
+.buttonholder{
+    text-align:center;
+
+}
+.video-intro{
+    text-align: center;
+}
+.video-int{
+    border:none;
+}
+.social{
+    text-align: left;
+    padding:10px;
+}
+.social-links{
+    width:2%;
+}
+.content-about{
+    font-family: Montserrat;
+    padding:30px;
+    font-size:0.2vw;
+    justify-content: no-space;
+}
+.head{
+    font-size:1.5vw;
+    border:2px solid rgb(194, 191, 191);
+    width:40%;
+}
+.interface{
+    text-align: center;
+}
+.social{
+    text-align: left;
+    padding:10px;
+}
+.social-links{
+    width:2%;
+}
+.contain{
+    text-align: center;
+    box-shadow: 10px 0px 0px 10px #111;
+    padding:20px;
+}
+.textonly{
+    font-family:Montserrat;
+    padding:100px;
+    font-size:1vw;
+}
+.sp{
+    padding:50px;
+}
+
+</style>
+<body>
+    <header class="logoup">
+        <!-- <div class="temp"style="text-align:center;">
+            <img src="https://www.lawctopus.com/wp-content/uploads/2014/07/cu-logo.jpg" alt="" srcset="">
+        </div> -->
+        <div id="holder1">
+          
+            <img src="logo.png" alt="" srcset=""class="logo"id="up">
+    
+    <div class="navholder">
+    <nav class="nav">
+        <a href="index.html" class="navlink">HOME</a><a href="Cryptomania-schedule.html" class="navlink">SCHEDULE</a><a href="Cryptomania-Our Team.html" class="navlink">TEAM</a><a href="Cryptomania-events.html" class="navlink">EVENTS</a><a href="Cryptomania-about.html" class="navlink">ABOUT</a><a class="navlink" href="Cryptomania-contact.html">CONTACT US</a>
+        <a href="Cryptomania-events.html" class="navlink">REGISTER</a>
+        
+        
+    </nav>
+    
+    <br>
+    </div>
+     <div class="lo">
+        <img src="Christ Logo Color.png" alt=""width="25%">
+    </div> 
+    
+    
+    
+    </div>
+    
+        <div class="side-nav-0">
+           
+         <div id="mySidenav" class="sidenav">
+            
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">HOME</a>
+            <a href="Cryptomania-schedule.html">SCHEDULE</a>
+            <a href="Cryptomania-Our Team.html">TEAM</a>
+            <a href="Cryptomania-events.html">EVENTS</a>
+            <a href="Cryptomania-about.html">ABOUT</a>
+            <a href="Cryptomania-contact.html">CONTACT US</a>
+            <a href="Cryptomania-events.html">REGISTER</a>
+            <br><br>
+            <img src="Christ Logo Color.png" width="80%"alt="">
+         </div>
+          
+          <!-- <h2>Animated Sidenav Example</h2> -->
+          <!-- <p>Click on the element below to open the side navigation menu.</p> -->
+          <img src="logo.png" alt="" srcset=""class="logo"id="up">
+          <span style="font-size:30px;cursor:pointer;padding:0;" onclick="openNav()">&#9776; </span>
+          <br>
+        </div>
+    
+    </header>
+     
+<div class="contain">
+    <div class="contain-pic-left">
+<img src="Christ Logo Color.png" alt=""width="30%"style="padding:10px;">
+    </div>
+    <div class="textonly">
+        CHRIST (DEEMED TO BE UNIVERSITY)
+CHRIST (Deemed to be University) was born out of the educational vision of St Kuriakose Elias Chavara, an educationalist and social reformer of the nineteenth century in South India. He founded the first Catholic indigenous congregation, Carmelites of Mary Immaculate (CMI), in 1831 which administers CHRIST (Deemed to be University).
+
+Established in 1969 as Christ College, it undertook path-breaking initiatives in Indian higher education with the introduction of innovative and modern curricula, insistence on academic discipline, imparting of Holistic Education and adoption of global higher education practices with the support of creative and dedicated staff.
+
+The University Grants Commission (UGC) of India conferred Autonomy to Christ College in 2004 and identified it as an Institution with Potential for Excellence in 2006. In 2008 under Section 3 of the UGC Act, 1956, the Ministry of Human Resource Development of the Government of India, declared the institution Deemed to be University, in the name and style of CHRIST (Deemed to be University). One of the first institutions in India to be accredited in 1998 by the NAAC, and subsequently in 2004 and 2016, CHRIST (Deemed to be University) has the top grade ‘A’ in the 4-point scale.
+        
+    </div>
+</div>
+    <div class="contain sp">
+        <div class="contain-pic-left"style="font-size:3vw;font-weight:bolder;">
+           DEPARTMENT OF COMPUTER SCIENCE
+                </div>
+                <div class="textonly">
+                    The Department of Computer Science of CHRIST (Deemed to be University) strives to shape outstanding computer professionals with ethical and humane values in order to reshape our nation's destiny. The training imparted aims to prepare the young minds for the challenging opportunities in the IT industry with a sense of global awareness rooted in the Indian soil, nourished and supported by experts in the field.
+
+                </div>
+    </div>
+    <div class="contain sp">
+        <div class="contain-pic-left"style="font-size:3vw;font-weight:bolder;">
+          INTERFACE
+                </div>
+                <div class="textonly">
+                    Interface is a nexus for Technology. Innovation and Art, organized by the Department of Computer Science, the two-day extravaganza, which will be hosted on 17th to 20th November 2021, will witness the coalescence of the finest exponents compete in series of events in a bid to emerge victoriously.
+
+                    Interface has successfully surfaced as a brand in and of itself, invoking participation from thousands of students from different institutions and universities across India. It provides a platform for students to showcase their technical skills vis-à-vis real life technological scenarios that challenge them to think on a fly and apply everything they have learnt so far.
+                </div>
+    </div>
+
+        
+        
+            
+<footer>
+    <br><br>
+    
+       
+   
+    <br>
+    <div class="interface">
+        <img src="interface.png" alt=""width="20%" style="opacity:1;">
+    </div>
+    <div class="copyright">
+        All rights reserved Christ University, Department of Computer science, Interface and team &copy;
+    </div>
+    
+    <br>
+    <div class="social">
+        <a href="https://www.instagram.com"class="social-links">
+            <img src="ig.png" class="social-links"alt="">
+           </a>
+           <a href="" class="social-links">
+           <img src="fb.png" class="social-links"alt="">
+        </a>
+
+    </div>
+  
+     
+    
+</footer>
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+
+
+</body>
+</html>

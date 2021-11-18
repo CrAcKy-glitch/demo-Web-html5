@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,300&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>INTERFACE | EVENTS </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>CRYPTOMANIA | Events</title>
+</head>
+<style>
+    @media only screen and (max-width: 520px) {
+        * {
+            overflow-x:hidden;
+        }
+        #myvideo{
+            /* right:480%;
+             */
+            height:100% ;
+            text-align:center;
+            /* width:50%; */
+             overflow:hidden;
+        }
+       
+        .text{
+            font-size:3vw;
+        }
+        
+        .holder-content-left-1{
+            width:80%;
+        }
+        .btn-reg{
+            padding-right:150px;
+        }
+    }
+    @media only screen and (max-width:1020px){
+        #holder1{
+
+display: none!important;
+
+}
+.side-nav-0{
+display: block !important;
+
+}
+    }
+    
+   
+    /* body{
+        background-color:white;
+        opacity:0.5;
+    } */
+*::selection{
+        background-color: rgb(228,167,88);
+        color:white;
+    }
+    
+    body{
+        overflow-x:hidden;
+    }
+    .svg{
+        width:20%;
+    }
+    #myvideo{
+    position:fixed;
+    top:14vh;
+    right: 0;
+    left:7vh;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+    align-self: center;
+    margin-right:20px;
+    }
+    .logo{
+        /* width:16vh; */
+        height:30vh;
+        padding:0;
+    }
+    .text{
+        text-align: left;
+        /* margin-left:50%; */
+    }
+    header{
+        background-color: white;
+        position:sticky;
+        top:0;
+        z-index:1;
+        padding:-10px;
+        box-shadow: 0 0 10px 0 rgb(180, 177, 177);
+    }
+    .logoup{
+        text-align:center ;
+    }
+    .navlink{
+        font-family:Montserrat;
+        padding-right:4vh;
+        color:black;
+        text-decoration: none;
+        font-weight: bolder;
+        border-bottom:none;
+        transition:all 0.2s linear;
+        word-spacing: 10px;
+        font-size:1vw;
+    }
+    
+    .navlink:hover{
+
+        /* border-bottom:black; */
+        color:rgb(228, 167, 88);
+        
+    }
+   
+    .navholder{
+        /* display:inline; */
+        /* text-align: left; */
+        display: inline-block;
+        justify-content: space-between;
+        /* align-items: center; */
+        max-width:50%;
+        margin-left:-20%;
+        
+    }
+    .nav{
+        
+        /* margin-top:-200px; */
+        display: flex;
+    justify-content: space-around;
+
+    /* background-color: rgba(0, 0, 0, 0); */
+    /* align-items: center; */
+    /* min-height: 14vh; */
+    /* width: 100%; */
+    z-index: 2;
+    
+    }
+    .lo{
+    display:inline;
+}
+    
+    #up{
+        margin-right:60vh;
+        /* margin-left:-60vh; */
+        align-self: left;
+    }
+    footer{
+        background-color:lightgrey;
+        opacity:0.8;
+    }
+    .logo-christ{
+        opacity:1;
+    }
+    #logo{
+        width:40vh;
+        clip-path: inset(65% 0 15% 0);
+        /* margin-top:-400px; */
+    }
+    
+    .middle{
+        text-align:center;
+
+    }
+    .pic-left,.pic-right{
+        float:left;
+        border-radius: 38px;
+        padding: 10px !important;
+        width:20%;
+        
+    }
+    .pic-left{
+        float:left;
+        /* clip-path: circle(60.0% at 50% 20%); */
+       
+    }
+    .pic-right{
+        float:right;
+        /* clip-path: circle(60.0% at 60% 50%); */
+    }
+    .holder-content-left{
+        max-width:60%;
+        font-family:Montserrat;
+        border:2px solid black;
+        /* overflow:none; */
+        padding:4px 3px 6% 30px;
+        margin-left:22%;
+        transition:background-color 0.3s ease; 
+        border-radius: 10px;
+        background-color: white;
+        z-index:1;
+        opacity: 1;
+    }
+
+    /* .holder-content-right{
+        max-width:60%;
+        font-family:Montserrat;
+        border:2px solid black;
+        overflow:none;
+        padding:4px 3px 2% 30px;
+        margin-right:70px;
+        transition:background-color 0.3s ease; 
+        border-radius: 10px;
+        float:right;
+        margin-left:40%;
+        
+    } */
+    .text{
+        height:0;
+        display: none;
+        font-size:2vw;
+        padding:12px;
+
+    }
+    .holder-content-left-1:hover{
+       
+        background-color: rgb(98, 189, 98);
+        color:white;
+        box-shadow: 10px 0 10px 0px rgb(196, 192, 192);
+    }
+    .holder-content-left-1:hover .text{
+      display:block;
+    height:100%;
+    }
+    .head{
+        font-weight:bolder;
+        font-size:4vw;
+        text-align:center;
+        /* margin-left:500px; */
+    }
+    .EVENTS{
+        text-align:center;
+        font-family:Montserrat;
+             
+    }
+    .EVENTS h1{
+        font-size:3vw;
+    }
+    .copyright{
+        font-family:Montserrat;
+        text-align:center;
+        font-weight:bolder;
+    }
+    /* #sample{
+        height:0;
+        display:none;
+        transition: height 0.5s ease; 
+    }
+    #sample1:hover #sample{
+       height:100%;
+       color:black;
+       display:block;
+    } */
+    .wrapper{
+        text-align: center;
+    }
+    #googleit{
+        height:1%;
+    }
+    .pic-up{
+        width:30%;
+        text-align: center;
+        padding:0;
+        border-radius:16px;
+    }
+    .content-new{
+        text-align: center;
+    }
+    .holder-content-left-1{
+        max-width:50%;
+        font-family:Montserrat;
+        border:2px solid black;
+        /* overflow:none; */
+        /* padding:4px 3px 6% 30px; */
+        padding:10px;
+        margin-left:25%;
+        transition:background-color 0.3s ease; 
+        border-radius: 10px;
+        background-color: white;
+        z-index:1;
+        opacity: 1;
+    }
+    .line-of-text{
+        width:70%;
+        height:10px;
+    }
+    /* .get{
+        background-color: white;
+        opacity:0.4;
+        z-index: 0;
+    } */
+
+    /* side nav */
+    .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  font-family: Montserrat;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+.side-nav-0{
+    display: none;
+}
+
+.btn-reg{
+    padding:24px;
+    width:30%;
+    background-color:black;
+    color: white;
+    outline:none;
+    transition: background-color 0.3s ease;
+    border:none;
+    font-size: 2vw;
+}
+.btn-reg:hover{
+    background-color: white;
+    color:black;
+    border:2px solid black;
+}
+.social{
+    text-align: left;
+    padding:10px;
+}
+.social-links{
+    width:2%;
+}
+.interface{
+    text-align: center;
+}
+/* .navholder{
+    display: none;
+} */
+</style>
+<body data-new-gr-c-s-check-loaded="14.1034.0"data-gr-ext-installed>
+
+    <header class="logoup">
+        <!-- <div class="temp"style="text-align:center;">
+            <img src="https://www.lawctopus.com/wp-content/uploads/2014/07/cu-logo.jpg" alt="" srcset="">
+        </div> -->
+        <div id="holder1">
+          
+            <img src="logo.png" alt="" srcset=""class="logo"id="up">
+    
+    <div class="navholder">
+    <nav class="nav">
+        <a href="index.html" class="navlink">HOME</a><a href="Cryptomania-schedule.html" class="navlink">SCHEDULE</a><a href="Cryptomania-Our Team.html" class="navlink">TEAM</a><a href="Cryptomania-events.html" class="navlink">EVENTS</a><a href="Cryptomania-about.html" class="navlink">ABOUT</a><a class="navlink" href="Cryptomania-contact.html">CONTACT US</a>
+        <a href="Cryptomania-events.html" class="navlink">REGISTER</a>
+        
+        
+    </nav>
+    
+    <br>
+    </div>
+     <div class="lo">
+        <img src="Christ Logo Color.png" alt=""width="25%">
+    </div> 
+    
+    
+    
+    </div>
+    
+        <div class="side-nav-0">
+           
+         <div id="mySidenav" class="sidenav">
+            
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html">HOME</a>
+            <a href="Cryptomania-schedule.html">SCHEDULE</a>
+            <a href="Cryptomania-Our Team.html">TEAM</a>
+            <a href="Cryptomania-events.html">EVENTS</a>
+            <a href="Cryptomania-about.html">ABOUT</a>
+            <a href="Cryptomania-contact.html">CONTACT US</a>
+            <a href="Cryptomania-events.html">REGISTER</a>
+            <br><br>
+            <img src="Christ Logo Color.png" width="80%"alt="">
+         </div>
+          
+          <!-- <h2>Animated Sidenav Example</h2> -->
+          <!-- <p>Click on the element below to open the side navigation menu.</p> -->
+          <img src="logo.png" alt="" srcset=""class="logo"id="up">
+          <span style="font-size:30px;cursor:pointer;padding:0;" onclick="openNav()">&#9776; </span>
+          <br>
+        </div>
+    
+    </header>
+
+<!-- main content over here -->
+
+<br>
+<div class="EVENTS">
+<h1>
+    EVENTS
+</h1>
+</div>
+
+<br><br><br>
+   
+<div class="middle">
+    <video id="myvideo"src="crypto0.mp4"autoplay loop muted >
+     <!-- <source src="crpto0.mp4" type=""> -->
+    </video>
+</div>
+<div class="get">
+<div class="holder-content-left-1">
+    <div class="content-new">
+        <img src="photography.jfif" alt="" class="pic-up">
+        <div class="head">
+            Photography
+        </div>
+        <div class="text">
+            <hr class="line-of-text">
+             Description:-
+              In this event we will provide a topic and ask the participants to capture an image based on the provided topic. The winners will be announced on their creativity  in clicking the pictures while following the topic.
+              <br><br> Rules <br>
+              •Theme/Topic of the given round will be mentioned 10-15 minutes prior to the start of the event. <br>
+              •The images submitted should be unedited and in RAW format. <br>
+              •Late submissions will be subjected to negative markings depending on the delay or may even result in eliminations <br>
+              •Submitting Forgery or Copy of a picture will result in direct elimination <br>
+              • Each participant may submit only one photograph <br>
+              <br>
+              PRIZES: <br>
+              1st Prize: Rs 600 worth of Bitcoins
+              <br>
+              2nd Prize: Rs 300 worth of Bitcoins <br>
+              <br>
+              EVENT HEAD:S VIVEK KRISHNA <br>
+              vivek.krishna@science.christuniversity.in <br>
+              <div class=""style="text-align:center;">
+                  <br>
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSf3yz18tdvZIp65BuqKLH-wHr25I5_hsqcch-lHuskTDIeKeA/viewform">
+                  <button class="btn-reg">
+                      Register
+                  </button>
+                </a>
+              </div>
+    </div>
+    </div>
+</div>
+<br><br>
+<div class="holder-content-left-1">
+    <div class="content-new">
+        <img src="googleit-pic.png" alt="" class="pic-up">
+        <div class="head">
+            Google It!
+        </div>
+        <div class="text"id="sample">
+            <hr class="line-of-text">
+            <br>
+            Rules <br>
+            • It’s a simple googling competition, where the participants are given a question and they are asked to search through google and who ever gets the correct answer first will get the point . <br>
+            • There will be a minimum of 25 questions and a maximum of 35 questions. <br>
+            • The 3 winners are announced based on their points. <br>
+            • The competition will either happen in google meet or webex meet depending on the no. of participants. <br>
+            • The answers will be expected to be posted i chat box. <br>
+            • internet connectivity issues will not be considered. <br>
+            • late entries to the meet are strictly prohibited and will not be allowed.  <br>    
+            <br>
+            <br>
+            PRIZES: <br>
+            1st Prize: Rs 500 worth of Bitcoins
+            <br>
+            2nd Prize: Rs 300 worth of Bitcoins <br>
+            <br>
+            EVENT HEAD: Swathishree BV <br>
+            swathishree.bv@science.christuniversity.in
+            <div class=""style="text-align:center;">
+                <br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeBWBEgGHZzD-UmCiXgh1KVXBKaKi_t_129mZPbp9X_-eSASA/viewform">
+                <button class="btn-reg">
+                    Register
+                </button>
+            </a>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="holder-content-left-1">
+    <div class="content-new">
+        <img src="treasure-hunt.jpeg" alt="" class="pic-up">
+        <div class="head">
+            Treasure Hunt!
+        </div>
+        <div class="text"id="sample">
+            <hr class="line-of-text">
+            DESCRIPTION <br>
+            Treasure Hunt is a fun event where the teams are presented with a group of puzzles, clues, or
+            hints which the teams must solve in order to find piece of information. Solving each quiz will
+            lead the teams to the next level. <br><br>
+            RULES AND REGULATIONS <br>
+            • Each team can have a maximum of 4 members and minimum of 3 members <br>
+            • The entire game will be conducted in 3 fun and engaging levels <br>
+            • Each round will be consisting of 10-20 quiz questions <br>
+            • The team members are not allowed to use any online resources during the time duration
+            of the game <br>
+            • After each level, only the winning teams will be permitted to continue to the next level <br>
+            • The participants will be required to keep their audio and video ON throughout the game <br>
+            • No earphones/external devices are allowed during the game <br>
+            • Communication/discussion is permitted only within the assigned team <br>
+            • Malpractices will not be tolerated; if found, the team will be disqualified from the event. <br>
+            <br>
+            PRIZES: <br>
+            1st Prize: Rs 3000 worth of Bitcoins
+            <br>
+            2nd Prize: Rs 1500 worth of Bitcoins <br><br>
+            EVENT HEAD: LAKSHMI S LALU <br>
+            lakshmi.lalu@science.christuniversity.in
+            <div class=""style="text-align:center;">
+                <br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLQrHsH30azewEViNlCdjzl15PjhGXD2Mw46Zyki9PGLOlKg/viewform">
+                <button class="btn-reg">
+                    Register
+                </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="holder-content-left-1">
+    <div class="content-new">
+        <img src="idea.jpeg" alt="" class="pic-up">
+        <div class="head">
+            Innovation and Idea!
+        </div>
+        <div class="text"id="sample">
+            <hr class="line-of-text">
+            
+            Event Specific Rules : <br>
+            ● Team of 3. <br>
+            ● Slide Limit : 12 <br>
+            ● Time Limit (Preparing) : 6 hours <br>
+            ● Presentation should be submitted before the deadline. <br>
+            ● Any changes made to presentation after submission will result in
+            penalization or disqualification. <br>
+            ● Time Limit (Presentation) : 8 min + 1min (Buffer Time) <br>
+            ● Ideas should be practical and logical, any unfeasible idea will be
+            eliminated accordingly. <br>
+            ● App ideas should be original, any kind of malpractice will lead to the
+            disqualification of the team. <br>
+            ● Participants should be in attendance for the whole duration of the event. <br>
+            ● Participants should ensure they have a good internet connectivity for
+            speech,video clarity and presentation for smooth progress of the event. <br><br>
+            PRIZES: <br>
+            1st Prize: Rs 1500 worth of Bitcoins
+            <br>
+            2nd Prize: Rs 800 worth of Bitcoins <br><br>
+            EVENT HEAD: TARANA BOPANNA M <br>
+            tarana.m@science.christuniversity.in
+            <div class=""style="text-align:center;">
+                <br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSePr5zZCKf9iS9UA_odPYW2wkXAoU4n0CS19egi8Pe00u29zg/viewform">
+                <button class="btn-reg">
+                    Register
+                </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="holder-content-left-1">
+    <div class="content-new">
+        <img src="Valorant.jpeg" alt="" class="pic-up">
+        <div class="head">
+            Valorant
+        </div>
+        <div class="text">
+            <hr class="line-of-text">
+            Team of 5(participants can choose if they want to have an additional member as stand by)
+            Only the names and game ids registered can be used to partake in the event
+            Players should report to the lobby 5-10 minutes before their match begins
+            Matches are direct elimination
+            Each team can ban a map and hosts will pick a map randomly from remaining maps
+            Elimination matches, <br> quarters and semi-final mode:
+            Spike rush <br>
+            Finals mode:
+            Unrated <br><br>
+            PRIZES: <br>
+            1st Prize: Rs 3000 worth of Bitcoins
+            <br>
+            2nd Prize: Rs 1500 worth of Bitcoins <br>
+            <div class=""style="text-align:center;">
+                <br>
+                EVENT HEAD: KEVIN BENNY <br>
+                kevin.benny@science.christuniversity.in
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfumwoWi9HZ1qDdWZ2lmLR1cMvm1r8CPqLTdmgy0wLY_V__Qg/viewform">
+                <button class="btn-reg">
+                    Register
+                </button>
+            </a>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="holder-content-left-1">
+    <div class="content-new">
+        <img src="code-debugging.jpeg" alt="" class="pic-up">
+        <div class="head">
+            Debug the code
+        </div>
+        <div class="text">
+            <hr class="line-of-text">
+            Event Rules: <br>
+            ● Teams of 2 each <br>
+            ● 2 roundsRound 1 (Prelims)-1 5 mins
+            Round 2-90 mins <br>
+            ● Teams who reach the final round will depend on how many register. <br>
+            ● Teams with Equal points to advance based on Tiebreaker questions(won’t know
+            which) and THEN by the faster submission. <br>
+            ● Any form of malpractice and cheating will result in penalization or elimination from the
+            Cryptomania fest itself. <br>
+            ● Programming Languages for Prelims - C, C++, Java, Python. <br>
+            ● Programming Languages for Final round - C, C++, Java. <br>
+            ● Final round Each team will be in separate google meet with a volunteer each, and
+            both members will have to have video and mic on at all times. One will type and
+            share the screen, the other teammate will have to fold hands and keep their laptop at
+            a distance to provide a full view and connect earphones to listen and speak. <br>
+            ● Make sure you have a strong and secure internet connection, working microphone
+            and webcam and try your best to stay in a place with power backup. Participants will
+            not be allowed to leave or mute themselves. Every time they do, they will be given a
+            warning. 3 warnings and you will be disqualified. If you get disconnected you have a
+            total of 5 minutes(for the team, not per participant) to reconnect, each disconnection
+            time will accumulate, and if you cross 5 minutes, you will be disqualified. The same
+            applies to switching off your video. <br>
+            ● Each team will have to mail a file(.c/.cpp/.java) with the final code. Submission time
+            will be taken into consideration if the overall marks are the same. <br>
+            ● The Event head’s decision is final. <br>
+            ● Results will be announced during Valedictory Ceremony. <br><br>
+            PRIZES: <br>
+            1st Prize: Rs 3000 worth of Bitcoins
+            <br>
+            2nd Prize: Rs 1500 worth of Bitcoins <br>
+            <br>
+            EVENT HEAD: SUPAN A V <br>
+            supan.amrapali@science.christuniversity.in
+            <br>
+            <div class=""style="text-align:center;">
+                <br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfsZBAPKj-0eepUV0SwkfgUZIQanD1nS7wLr4qEBysrQNv-4Q/viewform">
+                <button class="btn-reg">
+                    Register
+                </button>
+            </a>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="holder-content-left-1">
+    <div class="content-new">
+        <img src="JUST-A-Minute.svg" alt="" class="pic-up">
+        <div class="head">
+            Jam It!
+        </div>
+        <div class="text"id="sample">
+            <hr class="line-of-text">
+            DESCRIPTION <br>
+Just-A-Minute (or JAM) is an all round-fun event that is all about the control of the mind over the mouth. Can you make it through sixty seconds of non-stop talking without hesitation, repetition, or deviation? Or will the sheer pressure make you crumble and have your competitors pounce on you in an instant?
+RULES <br>
+
+●	The entire event will be conducted in 3 levels. <br>
+●	The JAM master is god. No questions or arguments once the final decision has been made. <br>
+●	The total time is sixty seconds, inclusive of all the time that all the speakers in a given round are allowed to speak. <br>
+●	The participants will be required to keep their audio and video ON throughout the game. <br>
+●	Malpractices will not be tolerated; if found, will be disqualified from the event. <br>
+●	The winner is the person with the maximum number of points at the end of the round. <br>
+●	When the chair says start talking, start talking. Immediately. <br>
+●	Try not to speak too quickly. <br>
+●	 Never say 'er', 'erm', 'um', or 'ahhhh'. <br><br>
+PRIZES: <br>
+1st Prize: Rs 1000 worth of Bitcoins
+<br>
+2nd Prize: Rs 500 worth of Bitcoins <br>
+<br>
+EVENT HEAD: JOSNA JOSEPH <br>
+josna.joseph@science.christuniversity.in <br>
+            <div class=""style="text-align:center;">
+                <br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfqHDVCGAfl4ntDGg26EWnjZ-p3KXq_FjTm8H0IcASZWN-9qA/viewform">
+                <button class="btn-reg">
+                    Register
+                </button>
+            </a>
+            </div>   
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="holder-content-left-1">
+    <div class="content-new">
+        <img src="Graphic Design' (2).png" alt="" class="pic-up">
+        <div class="head">
+            Graphic Designing
+        </div>
+        <div class="text"id="sample">
+            <hr class="line-of-text">
+            Details <br>
+             ●  Individual event <br>
+             ●  3Ds Max version 2019 and upwards are allowed to be used by the participants. Please see that
+            the software is installed in your laptop prior to the commencement of the event <br>
+            ●  Submission should be in .max file and the slot number provided must be mentioned in the file
+            name. <br>
+            ● The file should be named in the following format 3dmodeling_SlotNumber <br>
+            ● The link of submission will be provided a day before the even. <br>
+            ● The topic will be given on the spot. <br>
+            ● Importing any .max object from the internet is strongly forbidden though textures can be
+            downloaded and used. Plagiarized content will be disqualified. <br>
+            ●  Time duration:4 hours 15 minutes(including 15 minutes for uploading)
+            Video should be switched on throughout the event. <br>
+            ● zIf disconnected due to any technical issue, the participant must rejoin as soon as possible and
+            immediately inform the host. <br> <br>
+            PRIZES: <br>
+            1st Prize: Rs 1000 worth of Bitcoins
+            <br>
+            2nd Prize: Rs 500 worth of Bitcoins <br><br>
+            EVENT HEAD:TAMANNA PRAMANIK <br>
+            tamanna.pramanaik@science.christuniversity.in
+            <div class=""style="text-align:center;">
+                <br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-FjfcWzTUh_4QiFZK13Nhy_McscTVnavn_Gt-KRtSQ_EYZA/viewform">
+                <button class="btn-reg">
+                    Register
+                </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<br><br>
+<div class="holder-content-left-1">
+    <div class="content-new">
+        <img src="ghost-in-the-heap.png" alt="" class="pic-up">
+        <div class="head">
+            Ghost in the heap!! boo!
+        </div>
+        <div class="text"id="sample">
+            <hr class="line-of-text">
+            Event Rules: <br>
+            ● This is a team event. Each team should consist of 2-3 members. <br>
+            ● Team names must be submitted before the event begins. The conditions for the
+            team name include - No spaces, only letters and numbers, and no profanity. <br>
+            ● On the day of the event, it will be conducted for the duration of 12 hours:
+            11:00AM - 11:00PM. <br>
+            ● The event will be conducted in asynchronous mode. <br>
+            ● Discord will be the official mode of communication. <br>
+            ● The participants are expected to join the discord server sent to them before the
+            event, without fail. <br>
+            ● The participants will be given 3 groups of 4 challenges each, with an interval of 4
+            hours. Total number of challenges: 3x4 = 12. <br>
+            ● Challenges are of types usually found on hacking CTFs. The catalog of challenges
+            ● is a mixture of puzzle-based and programming-based challenges. <br>
+            In some challenges, programming knowledge proves beneficial but is not a
+            prerequisite for a majority of the challenges. <br>
+            ● Each challenge will give an answer, which is to be converted into a flag using the
+            flag retriever (webpage will be provided). The flag retriever keeps track of your
+            team name, question number, question-set, the time of submission, and points,
+            and will not return your flag if the wrong answer is submitted. <br>
+            ● Some challenges are directly linked with the flag-retriever and will grant you the
+            flag as an when you have completed the challenge. <br>
+            ● Sharing of the answers between teams may result in disqualification or
+            elimination from the Cryptomania fest itself. <br>
+            ● The teams with the most points will be declared the winner/s. <br><br>
+            PRIZES: <br>
+            1st Prize: Rs 3000 worth of Bitcoins
+            <br>
+            2nd Prize: Rs 1500 worth of Bitcoins <br><br>
+            EVENT HEAD: BHAVYA KUKKAR <br>
+            bhavya.kukkar@science.christuniversity.in
+            <div class=""style="text-align:center;">
+                <br>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSd28fcgV9vLEj9mh9tCJdiW7PaJ_Ekr3Y_bPbfX5X32vqxHVQ/viewform">
+                <button class="btn-reg">
+                    Register
+                </button>
+            </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- script -->
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    </script>
+<!-- <footer>hi</footer> -->
+<br><br>
+<footer>
+    <br><br>
+    
+       
+    <!-- <div class="logo-christ">
+        <a href="https://christuniversity.in/"target="_blank">
+            <img src="CHRIST LOGO  Black.png" alt="" srcset=""style="width:40vh;">
+        </a>
+        
+    </div> -->
+    <br>
+    <div class="interface">
+        <img src="interface.png" alt=""width="20%" style="opacity:1;">
+    </div>
+    <div class="copyright">
+        All rights reserved Christ University, Department of Computer science, Interface and team &copy;
+    </div>
+    
+    <br>
+    <div class="social">
+        <a href="https://www.instagram.com/tv/CWDVotiowFL/?utm_source=ig_web_copy_link"class="social-links">
+            <img src="ig.png" class="social-links"alt="">
+           </a>
+           <a href="https://www.facebook.com/www.christuniversity.in/" class="social-links">
+           <img src="fb.png" class="social-links"alt="">
+        </a>
+        <a href="">
+            <img src="yt.jpg" alt="" class="social-links">
+        </a>
+
+    </div>
+    <!-- <div class="bottom">
+        <a href="#get" class="btm"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWOZGhYiUrSpP_VU sx7sVfy_wFdrIpkpqG0w&usqp=CAU" alt="" srcset=""class="btm1">
+        </a>  
+     </div> -->
+     
+    
+</footer>
+
+</body>
+</html>
